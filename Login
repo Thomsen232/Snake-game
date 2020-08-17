@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+    <style>
+body{
+	background-color: #FA431C; //Dette søger for at baggrunden er hvid.
+}
+.login{
+	position: absolute;
+	top: calc(50% - 75px);
+	left: calc(50% - 150px);
+	height: 150px;
+	width: 350px;
+	padding: 10px; //Her bestemmes placeringen af boksen med de tre bokse "username","password" og logind knappen.
+}
+.login input[type=text]{
+	width: 250px;
+	height: 30px;
+	border: 1px solid #595959;
+	border-radius: 2px;
+	color: #595959;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+}
+.login input[type=password]{
+	width: 250px;
+	height: 30px;
+	border: 1px solid #595959;
+	border-radius: 2px;
+	color: #595959;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+	margin-top: 10px;
+}
+.login input[type=button]{
+	width: 260px;
+	height: 35px;
+	border: 1px solid #595959;
+	cursor: pointer;
+	border-radius: 2px;
+	color: #595959;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 10px;
+  //De tre dele her over er den generale opsætning af de tre bokse "username","password" og logind knappen.
+  Der bestemmes hvor de skal placeres og hvordan de skal se ud.
+}
+</style>
+</head>
+</body>
+		<form name="login">
+		<div class="login">
+				<input type="text" placeholder="Username" name="userid">
+				<input type="password" placeholder="Password" name="pswrd">
+        <!Her bestemmes hvordan teksten i "username" og "password" skal henvises.>
+				<input type="button" onclick="check(this.form)" value="Login"/>
+        <!Her fortælles hvad der skal ske når man trykker på knappen>
+		</div>
+</form>
+<script language="javascript">
+function check(form)
+{
+ if(form.userid.value =="Victor" & form.pswrd.value == "Feddersen")
+  {
+    window.open('https://www.youtube.com/watch?v=SBCw4_XgouA')
+  }
+  else {
+    alert("Username eller password er falsk")
+  }
+}
+</script>
+<!Selve scriptet siger tjek hvad der står i "username" og "password" hvis der står Jakob og Høg send brugeren videre. Hvis ikke meld fejl.>
+</html>
