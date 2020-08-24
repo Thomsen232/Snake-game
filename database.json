@@ -1,14 +1,14 @@
 {"Brugere":[
-  {"firstname":"", "lastname":"","class":, "age":},
-  {"firstname":"", "lastname":"", "class":, "age":},
-  {"firstname":"", "lastname":"","class":, "age":},
+  {"Brugernavn":"", "password":"","class":, "age":},
+  {"Brugernavn":"", "password":"", "class":, "age":},
+  {"Brugernavn":"", "password":"","class":, "age":},
 ]}
-{"firstname":[
+{"Brugernavn":[
   {"name":""}
   {"name":""}
   {"name":""}
   ]}
-{"lastname":[
+{"password":[
   {"lastname":""}
   {"lastname":""}
   {"lastname":""}
