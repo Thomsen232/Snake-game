@@ -1,0 +1,25 @@
+{"Brugere":[
+  {"Brugernavn":"", "password":"","class":, "age":},
+  {"Brugernavn":"", "password":"", "class":, "age":},
+  {"Brugernavn":"", "password":"","class":, "age":},
+]}
+{"Brugernavn":[
+  {"name":""}
+  {"name":""}
+  {"name":""}
+  ]}
+{"password":[
+  {"lastname":""}
+  {"lastname":""}
+  {"lastname":""}
+]}
+{"Class":[
+  {"name":},
+  {"name":},
+  {"name":},
+]}
+{"Age":[
+  {"name":}
+  {"name":}
+  {"name":}
+]}
