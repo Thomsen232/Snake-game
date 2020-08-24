@@ -1,0 +1,25 @@
+{"Brugere":[
+  {"firstname":"", "lastname":"","class":, "age":},
+  {"firstname":"", "lastname":"", "class":, "age":},
+  {"firstname":"", "lastname":"","class":, "age":},
+]}
+{"firstname":[
+  {"name":""}
+  {"name":""}
+  {"name":""}
+  ]}
+{"lastname":[
+  {"lastname":""}
+  {"lastname":""}
+  {"lastname":""}
+]}
+{"Class":[
+  {"name":},
+  {"name":},
+  {"name":},
+]}
+{"Age":[
+  {"name":}
+  {"name":}
+  {"name":}
+]}
