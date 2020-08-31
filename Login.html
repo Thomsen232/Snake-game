@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="icon" type="image/png" href="https://i.ibb.co/YWsvFHr/snakelow.png">
   <title>Login</title>
     <style>
 body{
-	background-color: #FFF;
+	background-color: #fff;
 }
 
 .login{
 	position: absolute;
-	top: calc(50% - 75px);
+	top: calc(50% - 175px);
 	left: calc(50% - 150px);
-	height: 150px;
-	width: 350px;
+	height: 280px;
+	width: 260px;
 	padding: 10px;
+  border: 1px solid #000;
+  background-color: #F9F9F9;
 }
+
+#picture1{
+  margin-left: 40px;
+  margin-top: 10px;
+}
+
 .login input[type=text]{
 	width: 250px;
 	height: 30px;
@@ -25,6 +34,7 @@ body{
 	font-weight: 400;
 	padding: 4px;
 }
+
 .login input[type=password]{
 	width: 250px;
 	height: 30px;
@@ -42,28 +52,59 @@ body{
 	border: 1px solid #595959;
 	cursor: pointer;
 	border-radius: 2px;
-	color: #595959;
+	color: #000;
 	font-size: 16px;
 	font-weight: 400;
 	padding: 6px;
 	margin-top: 10px;
+  background-color: #E8FDFF;
 
 }
+
+#loginref {
+  background:none;
+  border:none;
+  text-decoration: underline;
+  font-size: 14px;
+  margin-top: 20px;
+  margin-left: 75px;
+  width: 110px;
+  height: 30px;
+}
+#loginref:focus{
+  outline: none;
+}
+
+#pswrdrepeatID{
+  display: none;
+}
+
 </style>
 </head>
 </body>
-		<form name="login">
-		<div class="login">
-				<input type="text" placeholder="Brugernavn" name="userid">
-				<input type="password" placeholder="Kode" name="pswrd">
-				<input type="button" onclick="check(this.form)" value="Login"/>
 
+<div class="login"></div>
+
+</div>
+  <form name="login">
+  	<div class="login" id="midterkasse">
+        <a id="picture1"><img src="https://i.ibb.co/XYbfkY9/snakeipixels.png" alt="snakeipixels" border="0"></a>
+  			<input type="text" placeholder="Brugernavn" name="user" id="userID">
+  			<input type="password" placeholder="Password" name="pswrd" id="pswrdID">
+        <input type="password" placeholder="Gentag password" name="pswrdrepeat"/ id="pswrdrepeatID">
+  			<input type="button" onclick="check(this.form)" value="Login"/ id="loginID">
+        <input type="button" value="Opret en konto" id="loginref" onclick="">
 		</div>
-</form>
+  </form>
 <script language="javascript">
+var opret = true;
+var userIDvalue = document.getElementById('userID').placeholder
+var pswrdIDvalue = document.getElementById('pswrdID').placeholder
+var loginIDvalue = document.getElementById('loginID').value
+
 function check(form)
 {
- if(form.userid.value =="Victor" & form.pswrd.value == "Feddersen")
+ if(form.user.value =="Victor" & form.pswrd.value == "Feddersen")
   {
     window.open('https://www.youtube.com/watch?v=SBCw4_XgouA')
   }
@@ -71,5 +112,39 @@ function check(form)
     alert("Brugernavn eller kode er ikke korrekt")
   }
 }
+
+document.getElementById('loginref').onclick = function(){opretellerlogin()};
+
+function opretellerlogin(){
+  if(opret == true)
+  {
+    //Baggrundskassen gøres længere
+    document.getElementById('midterkasse').style.height = "330px";
+    //Teksten som trykkes, ændres til loginknap
+    document.getElementById('loginref').value= "Login";
+    //Feltet med Gentag kode bliver viseligt
+    document.getElementById('pswrdrepeatID').style.display = "block";
+    //Login knappen hedder nu opret kontoknappen.
+    document.getElementById('loginID').value ="Opret en ny konto";
+    //Knap bliver grøn
+    document.getElementById('loginID').style.backgroundColor= "#EAFFE8";
+    opret = false
+  } else {
+    //Baggrundskassen gøres kortere
+    document.getElementById('midterkasse').style.height = "280px";
+    //Teksten som trykkes, ændres til Opret konto knappetn
+    document.getElementById('loginref').value= "Opret en konto";
+    //Feltet med Gentag kode bliver skjult
+    document.getElementById('pswrdrepeatID').style.display = "none";
+    //Opret kontoknappen hedder nu loginknappen
+    document.getElementById('loginID').value =loginIDvalue;
+    //Knap bliver blå
+    document.getElementById('loginID').style.backgroundColor= "#E8FDFF";
+    opret = true
+  }
+
+
+}
+
 </script>
 </html>
