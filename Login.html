@@ -82,20 +82,16 @@ body{
 </style>
 </head>
 </body>
-
-<div class="login"></div>
-
-</div>
-  <form name="login">
   	<div class="login" id="midterkasse">
-        <a id="picture1"><img src="https://i.ibb.co/XYbfkY9/snakeipixels.png" alt="snakeipixels" border="0"></a>
+      <a id="picture1"><img src="https://i.ibb.co/XYbfkY9/snakeipixels.png" alt="snakeipixels" border="0"></a>
+      <form name="login">
   			<input type="text" placeholder="Brugernavn" name="user" id="userID">
   			<input type="password" placeholder="Password" name="pswrd" id="pswrdID">
         <input type="password" placeholder="Gentag password" name="pswrdrepeat"/ id="pswrdrepeatID">
   			<input type="button" onclick="check(this.form)" value="Login"/ id="loginID">
         <input type="button" value="Opret en konto" id="loginref" onclick="">
+      </form>
 		</div>
-  </form>
 <script language="javascript">
 var opret = true;
 var userIDvalue = document.getElementById('userID').placeholder
@@ -129,6 +125,10 @@ function opretellerlogin(){
     //Knap bliver grøn
     document.getElementById('loginID').style.backgroundColor= "#E8FDFF";
 
+    //Indhold i kasserne bliver rengjorte
+    document.getElementById('userID').value ="";
+    document.getElementById('pswrdID').value ="";
+
 
     opret = false
   } else {
@@ -142,6 +142,12 @@ function opretellerlogin(){
     document.getElementById('loginID').value =loginIDvalue;
     //Knap bliver blå
     document.getElementById('loginID').style.backgroundColor= "#EAFFE8";
+
+    //Indhold i kasserne bliver rengjorte
+    document.getElementById('userID').value ="";
+    document.getElementById('pswrdID').value ="";
+    document.getElementById('pswrdrepeatID').value ="";
+
     opret = true
   }
 
